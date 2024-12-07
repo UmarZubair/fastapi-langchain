@@ -4,34 +4,28 @@
 
 ### 1. **Using Pipenv (Python Virtual Environment)**
 
-- Install dependencies:
-  ```bash
-  make install
-  ````
+```bash
+# Install dependencies
+make install
 
-- Run the FastAPI app:
-  ```bash
-  make run
-  ```
+# Run the FastAPI app
+make run
 
-- The virtual environment shell can be opened by:
-  ```bash
-  pipenv shell
-  ``
+# Activate virtual environment shell
+pipenv shell
+```
 
 ### 2. **Using Docker**
 
-- Build the Docker image:
-  ```bash
-  make docker-build
-  ```
+```bash
+# Build the Docker image
+make docker-build
 
-- Run the Docker container:
-  ```bash
-  make docker-run
-  ```
+# Run the Docker container
+make docker-run
+```
 
-## Accessing the API Docs
+### Accessing the API Docs
 
 You can access the Swagger UI at [http://localhost:8000/docs](http://localhost:8000/docs).
 
