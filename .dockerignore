@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+Pipfile.lock
+*.log
+.env
+*.egg-info/
+dist/
+build/
