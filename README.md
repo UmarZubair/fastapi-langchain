@@ -7,19 +7,17 @@
 - Install dependencies:
   ```bash
   make install
-  ```
+  ````
 
 - Run the FastAPI app:
   ```bash
   make run
   ```
 
-- Open the application in your browser at [http://localhost:8000](http://localhost:8000).
-
 - The virtual environment shell can be opened by:
   ```bash
-  make shell
-  ```
+  pipenv shell
+  ``
 
 ### 2. **Using Docker**
 
@@ -33,7 +31,10 @@
   make docker-run
   ```
 
-- The app will be accessible at [http://localhost:8000](http://localhost:8000).
+## Accessing the API Docs
+
+You can access the Swagger UI at [http://localhost:8000/docs](http://localhost:8000/docs).
+
 
 ## Available Makefile Commands
 
