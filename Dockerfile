@@ -2,11 +2,8 @@ FROM python:3.11-slim
 
 WORKDIR /src
 
-COPY Pipfile /src/
-COPY Pipfile.lock /src/
+COPY requirements.txt /src/requirements.txt
 
-RUN pip install pipenv
-RUN pipenv lock -r > requirements.txt
 RUN pip install -r requirements.txt
 
 COPY . /src/

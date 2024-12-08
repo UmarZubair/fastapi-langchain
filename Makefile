@@ -4,6 +4,9 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}'
 
 install:
+	pipenv install
+
+dev:
 	pipenv install --dev
 
 run:
@@ -32,7 +35,11 @@ docker-build:
 	docker build -t fastapi-langchain-template .
 
 docker-run:
-	docker run -p 8000:8000 fastapi-langchain-template
+	docker run -p 8000:8000 --name fastapi-container fastapi-langchain-template
+
+docker-stop:
+	docker stop fastapi-container
+	docker rm fastapi-container
 
 export-requirements:
-	pipenv lock -r > requirements.txt
+	pipenv requirements > requirements.txt
