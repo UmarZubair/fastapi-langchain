@@ -1,12 +1,11 @@
 FROM python:3.11-slim
 
 WORKDIR /src
-
-COPY requirements.txt /src/requirements.txt
-
-RUN pip install -r requirements.txt
-
 COPY . /src/
+
+RUN pip install pipenv
+RUN pipenv requirements > /src/requirements.txt
+RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
