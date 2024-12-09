@@ -1,4 +1,4 @@
-# FastAPI Langchain Template
+# FastAPI Template
 
 ## Setup and Run Locally
 
